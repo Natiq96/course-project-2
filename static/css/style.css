@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: #1D2130;
+    --text-light-color: #fff;
+    --gradient-color-1: #D798E1;
+    --gradient-color-2: #9BFFA5;
+    --gradient-color-3: #AED3FF;
+    --gradient-color-4: #C9D4EF;
+    --gradient-color-5: #CACFFA;
+    --card-bg-color: #E0E4FC;
+    --l-gradinet-color-1: #373FFF;
+    --l-gradinet-color-2: #3ACAF8;
+    --placeholder-color: #555;
+    --border-color: #d1d5db;
+}
+
+html {
+    font-size: 10px;
+}
+
+.nav {
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-child {
+    font-size: 2.2rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.active {
+    padding: 1.5rem 2rem;
+    background-color: var(--text-color);
+    color: var(--text-light-color);
+    border-radius: 1rem;
+}
+
+
+.card-con {
+    padding: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-con-header {
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+    position: relative;
+    gap: 5rem;
+}
+
+.gradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: radial-gradient(circle at center,
+            var(--gradient-color-1),
+            var(--gradient-color-2),
+            var(--gradient-color-3),
+            var(--gradient-color-4),
+            var(--gradient-color-5));
+    filter: blur(150px);
+    z-index: -999;
+}
+
+.cc-header {
+    font-size: 5.6rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.cc-text {
+    font-size: 2.2rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.search {
+    width: calc(100% - 10rem);
+    display: flex;
+    gap: 1rem;
+    background-color: var(--text-light-color);
+    padding: 1rem 2rem ;
+    border-radius: 1rem;
+    align-items: center;
+}
+
+.search input {
+    color: var(--text-color);
+    outline: none;
+    border: none;
+    width: 50rem;
+    border-right: solid 2px var(--placeholder-color);
+    height: 3rem;
+}
+
+.search input::placeholder{
+    color: var(--placeholder-color);
+    font-size: 1.6rem;
+}
+
+.city{
+    width: 15rem;
+    display: flex;
+    font-size: 1.8rem;
+    color: var(--placeholder-color);
+    align-items: center;
+    gap: .5rem;
+    position: relative;
+}
+
+
+.privateCity{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 12rem;
+    top: 2rem;
+    background-color: var(--gradient-color-4);
+    padding: 1rem;
+    height: 10rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.privateCity::-webkit-scrollbar {
+    width: 8px; 
+}
+
+.privateCity::-webkit-scrollbar-track {
+    background: var(--card-bg-color); 
+    border-radius: 4px;
+}
+
+.privateCity::-webkit-scrollbar-thumb {
+    background-color: #6366f1; 
+    border-radius: 4px;
+    border: 2px solid var(--card-bg-color); 
+}
+
+.privateCity::-webkit-scrollbar-thumb:hover {
+    background-color: var(--l-gradinet-color-1);
+}
+
+.search button{
+    width: 15rem;
+    height: 5rem;
+    background-color: var(--text-color);
+    color: var(--text-light-color);
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.card-box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc((100% - 4 * 360px) / 3);
+}
+
+.card{
+    width: 36rem;
+    margin-top: 5rem;
+    background-color: var(--card-bg-color);
+    border-radius: 2rem;
+    box-shadow: 1px 1px 15px var(--text-color);
+}
+
+.card-text{
+    padding: 1rem;
+}
+
+.bmw{
+    background-color: var(--gradient-color-3);
+    border-radius: 2rem;
+}
+
+.bmw img,.assus img{
+    padding: 2rem;
+}
+
+
+.wrangler,.assus{
+    background-color: var(--gradient-color-5);
+    border-radius: 2rem;
+}
+
+.wrangler img{
+    padding: 2rem;
+}
+
+.card-img img{
+    width: 36rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.price p,.product-name p{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.product-date{
+    display: flex;
+    font-size: 1.8rem;
+    gap: .5rem;
+}
+
+.more-box{
+    margin-top: 5rem;
+}
+
+.more-box button{
+    padding: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-light-color);
+    background-color: var(--text-color);
+    border: none;
+    border-radius: 2rem;
+}
