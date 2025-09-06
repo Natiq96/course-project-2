@@ -292,7 +292,7 @@ html {
         display: flex;
         justify-content: flex-end;
         width: 100%;
-        padding: 5rem;
+        padding: 3rem;
     }
 
     .nav-icon-mobile ion-icon {
@@ -312,7 +312,12 @@ html {
 
     .card-con-header {
         max-width: 90%;
+        padding: 0;
         gap: 2rem;
+    }
+
+    .card-con{
+        padding: 2rem 5rem ;
     }
 
     .card-box {
