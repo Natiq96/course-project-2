@@ -23,6 +23,10 @@ html {
     font-size: 10px;
 }
 
+
+
+
+
 .nav {
     width: 100%;
     padding: 5rem;
@@ -30,6 +34,10 @@ html {
     justify-content: flex-end;
     align-items: center;
     gap: 2rem;
+}
+
+.nav-icon-mobile {
+    display: none;
 }
 
 .nav-child {
@@ -52,6 +60,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .card-con-header {
@@ -96,7 +105,7 @@ html {
     display: flex;
     gap: 1rem;
     background-color: var(--text-light-color);
-    padding: 1rem 2rem ;
+    padding: 1rem 2rem;
     border-radius: 1rem;
     align-items: center;
 }
@@ -110,12 +119,12 @@ html {
     height: 3rem;
 }
 
-.search input::placeholder{
+.search input::placeholder {
     color: var(--placeholder-color);
     font-size: 1.6rem;
 }
 
-.city{
+.city {
     width: 15rem;
     display: flex;
     font-size: 1.8rem;
@@ -126,7 +135,7 @@ html {
 }
 
 
-.privateCity{
+.privateCity {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -137,33 +146,33 @@ html {
     height: 10rem;
     overflow-x: hidden;
     overflow-y: auto;
-    
+
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
 .privateCity::-webkit-scrollbar {
-    width: 8px; 
+    width: 8px;
 }
 
 .privateCity::-webkit-scrollbar-track {
-    background: var(--card-bg-color); 
+    background: var(--card-bg-color);
     border-radius: 4px;
 }
 
 .privateCity::-webkit-scrollbar-thumb {
-    background-color: #6366f1; 
+    background-color: #6366f1;
     border-radius: 4px;
-    border: 2px solid var(--card-bg-color); 
+    border: 2px solid var(--card-bg-color);
 }
 
 .privateCity::-webkit-scrollbar-thumb:hover {
     background-color: var(--l-gradinet-color-1);
 }
 
-.search button{
+.search button {
     width: 15rem;
     height: 5rem;
     background-color: var(--text-color);
@@ -172,69 +181,80 @@ html {
     border-radius: 2rem;
     font-size: 1.8rem;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.card-box{
-    width: 100%;
+.search button ion-icon {
+    display: none;
+}
+
+.card-box {
     display: flex;
     flex-wrap: wrap;
-    gap: calc((100% - 4 * 360px) / 3);
+    gap: 2rem;
+    justify-content: center;
+    /* ortalamaq üçün */
 }
 
-.card{
-    width: 36rem;
+.card {
+    flex: 1 1 360px;
+    /* minimum 360px olsun */
+    max-width: 360px;
     margin-top: 5rem;
-    background-color: var(--card-bg-color);
-    border-radius: 2rem;
-    box-shadow: 1px 1px 15px var(--text-color);
 }
 
-.card-text{
+
+.card-text {
     padding: 1rem;
 }
 
-.bmw{
+.bmw {
     background-color: var(--gradient-color-3);
     border-radius: 2rem;
 }
 
-.bmw img,.assus img{
+.bmw img,
+.assus img {
     padding: 2rem;
 }
 
 
-.wrangler,.assus{
+.wrangler,
+.assus {
     background-color: var(--gradient-color-5);
     border-radius: 2rem;
 }
 
-.wrangler img{
+.wrangler img {
     padding: 2rem;
 }
 
-.card-img img{
-    width: 36rem;
+.card-img img {
+    width: 100%;
     height: 20rem;
     object-fit: cover;
     border-radius: 2rem;
 }
 
-.price p,.product-name p{
+.price p,
+.product-name p {
     font-size: 2.2rem;
     font-weight: 700;
 }
 
-.product-date{
+.product-date {
     display: flex;
     font-size: 1.8rem;
     gap: .5rem;
 }
 
-.more-box{
+.more-box {
     margin-top: 5rem;
 }
 
-.more-box button{
+.more-box button {
     padding: 2rem;
     font-size: 1.8rem;
     font-weight: 600;
@@ -242,4 +262,203 @@ html {
     background-color: var(--text-color);
     border: none;
     border-radius: 2rem;
+}
+
+
+@media (max-width: 850px) {
+    .card-box {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .card {
+        flex: 1 1 250px;
+        max-width: 250px;
+    }
+
+    .card-img img {
+        width: 250px;
+        height: 170px;
+    }
+
+    .card-con-header {
+        max-width: 60rem;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .nav-icon-mobile {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 5rem;
+    }
+
+    .nav-icon-mobile ion-icon {
+        font-size: 4rem;
+        color: var(--text-color);
+    }
+
+
+
+    .nav {
+        display: none;
+    }
+
+    .nav-child {
+        display: none;
+    }
+
+    .card-con-header {
+        max-width: 90%;
+        gap: 2rem;
+    }
+
+    .card-box {
+        justify-content: center;
+    }
+
+
+    .cc-header {
+        font-size: 3.2rem;
+    }
+
+    .cc-text {
+        font-size: 1.8rem;
+    }
+
+    .search {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .search input {
+        width: 30rem;
+    }
+
+    .search input::placeholder {
+        font-size: 1.4rem;
+    }
+
+    .city {
+        width: 10rem;
+        font-size: 1.6rem;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .privateCity {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 12rem;
+        top: 2rem;
+        background-color: var(--gradient-color-4);
+        padding: 1rem;
+        height: 10rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+
+
+    .search button {
+        width: 5rem;
+        padding: 5px 1rem;
+        height: 3rem;
+        border-radius: 5px;
+    }
+
+    .search button p {
+        display: none;
+    }
+
+    .search button ion-icon {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .card-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        /* ortalamaq üçün */
+    }
+
+    .card {
+        flex: 1 1 360px;
+        /* minimum 360px olsun */
+        max-width: 360px;
+        margin-top: 5rem;
+    }
+
+
+    .card-text {
+        padding: 1rem;
+    }
+
+    .bmw {
+        background-color: var(--gradient-color-3);
+        border-radius: 2rem;
+    }
+
+    .bmw img,
+    .assus img {
+        padding: 2rem;
+    }
+
+
+    .wrangler,
+    .assus {
+        background-color: var(--gradient-color-5);
+        border-radius: 2rem;
+    }
+
+    .wrangler img {
+        padding: 2rem;
+    }
+
+    .card-img img {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+        border-radius: 2rem;
+    }
+
+    .price p,
+    .product-name p {
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+
+    .product-date {
+        display: flex;
+        font-size: 1.8rem;
+        gap: .5rem;
+    }
+
+    .more-box {
+        margin-top: 5rem;
+    }
+
+    .more-box button {
+        padding: 2rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--text-light-color);
+        background-color: var(--text-color);
+        border: none;
+        border-radius: 2rem;
+    }
+
+
+
 }

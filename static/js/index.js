@@ -25,7 +25,7 @@ cityItem.forEach(item =>{
 
 
 input.addEventListener("input", function() {
-    if (input.value.length >= 55) {
+    if (input.value.length >= 30) {
         input.value = input.value.slice(0, 55); 
         alert("Simvol sayı 55-dir!!!")
     }
