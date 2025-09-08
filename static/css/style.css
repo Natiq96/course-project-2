@@ -17,13 +17,16 @@
     --l-gradinet-color-2: #3ACAF8;
     --placeholder-color: #555;
     --border-color: #d1d5db;
+    --nav-bg-color: #f4f8fc;
 }
 
 html {
     font-size: 10px;
 }
 
-
+a{
+    text-decoration: none;
+}
 
 
 
@@ -34,6 +37,7 @@ html {
     justify-content: flex-end;
     align-items: center;
     gap: 2rem;
+    background-color: var(--nav-bg-color);
 }
 
 .nav-icon-mobile {
@@ -101,13 +105,13 @@ html {
     font-weight: 600;
 }
 
+
 .active {
     padding: 1.5rem 2rem;
     background-color: var(--text-color);
     color: var(--text-light-color);
     border-radius: 1rem;
 }
-
 
 .card-con {
     padding: 5rem;
@@ -126,20 +130,22 @@ html {
     padding: 5rem 0;
     position: relative;
     gap: 5rem;
+
+   
 }
 
 .gradient {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: radial-gradient(circle at center,
+    background: radial-gradient(circle at bottom,
             var(--gradient-color-1),
             var(--gradient-color-2),
             var(--gradient-color-3),
             var(--gradient-color-4),
             var(--gradient-color-5));
-    filter: blur(150px);
-    z-index: -999;
+    filter: blur(250px);
+    z-index: -1;
 }
 
 .cc-header {
@@ -258,10 +264,10 @@ html {
 
 .card {
     flex: 1 1 360px;
-    /* minimum 360px olsun */
     max-width: 360px;
     margin-top: 5rem;
 }
+
 
 
 .card-text {
@@ -367,7 +373,6 @@ html {
     .nav-child {
         display: none;
     }
-
     .card-con-header {
         max-width: 90%;
         padding: 0;
@@ -459,3 +464,4 @@ html {
 
 
 }
+
