@@ -376,7 +376,7 @@ html {
     }
 
     .card-con {
-        padding: 2rem 5rem;
+        padding: 2rem;
     }
 
     .card-box {
@@ -446,5 +446,7 @@ html {
         align-items: center;
         justify-content: center;
     }
+
+
 
 }
