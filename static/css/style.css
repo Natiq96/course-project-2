@@ -465,3 +465,235 @@ a{
 
 }
 
+
+.advant{
+    padding: 50px;
+}
+
+.advantTitle {
+    font-size: 20px;
+    font-weight: 350;
+    color: blue;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+.advantHeader {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.advantLightblue {
+    background-color: rgb(217, 234, 239);
+    padding: 50px 50px 50px 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: calc((100% - 1500px) / 3);
+}
+
+.advantItem {
+    width: 500px;
+    padding: 10px;
+}
+
+.advantItemImg {
+    width: 40px;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 5px 0;
+}
+
+.advantItemImg img {
+    width: 100%;
+}
+
+.advantItem p {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 28px;
+}
+
+
+.text {
+    width: 100%;
+    font-size: 42px !important;
+    font-weight: 600;
+}
+
+.advantUseRules {
+    display: flex;
+    justify-content: space-between;
+}
+
+.useRulesLeft {
+    width: 700px;
+}
+
+.rulesTextTitle {
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+
+.rulesTextLorem {
+    font-size: 70px;
+    font-weight: 700;
+    padding-bottom: 35px;
+}
+
+.rulesItemLorem{
+        font-size: 20px;
+    }
+
+.arrowImg {
+    background-color: rgb(251, 133, 152);
+    border-radius: 50px;
+}
+
+.useRulesRight {
+    width: 694px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.arrow-Text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0px 20px 150px;
+}
+
+.gradientText {
+    background: linear-gradient(to right, #3a3afa 0%, #74efff 45%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 2.8rem;
+}
+
+.arrow-Text p{
+    font-size: 1.8rem;
+}
+
+@media (max-width:1700px) {
+    .advantItem {
+        width: 400px;
+    }
+
+    .advantLightblue {
+        gap: ((100% -1200px) / 3);
+    }
+
+    .advantItem p {
+        font-size: 24px;
+    }
+
+    .text {
+        font-size: 38px !important;
+    }
+}
+
+@media (max-width: 1400px) {
+    .advantItem {
+        flex: 1 1 calc(100% / 3);
+    }
+
+    .advantUseRules{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .useRulesLeft {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .rulesTextTitle {
+        font-size: 30px;
+    }
+
+    .rulesTextLorem {
+        font-size: 50px;
+        font-weight: 600;
+        padding: 0;
+    }
+
+    .useRulesRight {
+        width: 100%;
+        gap: 30px;
+    }
+
+    .arrow-Text {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .arrow-Text p{
+        font-size: 20px;
+    }
+
+    
+
+    .gradientText {
+        background: linear-gradient(to right, #3a3afa 0%, #74efff 45%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .advantLightblue {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .advantItem {
+        width: 600px;
+    }
+}
+
+@media (max-width: 720px) {
+    .advantItem{
+        width: 400px;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .advantLightblue{
+        padding: 15px 0;
+    }
+    .advantItem{
+        width: 300px;
+    }
+   body{
+    padding: 20px;
+   }
+
+   .advantHeader{
+    font-size: 40px;
+    padding: 10px 0;
+   }
+    
+}
